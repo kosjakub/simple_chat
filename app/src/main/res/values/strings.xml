@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">chat2</string>
+    <string name="nick">Nick</string>
+    <string name="server_ip">Server IP</string>
+    <string name="start">START!</string>
+    <string name="chat">Chat</string>
+    <string name="message">Message</string>
+    <string name="post">Post</string>
+</resources>
