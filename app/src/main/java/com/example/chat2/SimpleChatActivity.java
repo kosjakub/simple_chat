@@ -74,7 +74,7 @@ public class SimpleChatActivity extends AppCompatActivity {
         String clientId;
         MemoryPersistence persistence = new MemoryPersistence();
         try {
-            String broker = "tcp://"+ip+":1883";
+            String broker = "tcp://" + ip + ":1883";
             clientId = nick;
             sampleClient = new MqttClient(broker, clientId, persistence);
             sampleClient.setCallback(new MqttCallback() {
@@ -97,7 +97,6 @@ public class SimpleChatActivity extends AppCompatActivity {
                 public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {
                     System.out.println("deliveryComplete");
                 }
-                //TODO
             });
             MqttConnectOptions connOpts = new MqttConnectOptions();
             connOpts.setCleanSession(true);
@@ -106,9 +105,9 @@ public class SimpleChatActivity extends AppCompatActivity {
             System.out.println("Connected");
             sampleClient.subscribe("#");
         } catch (MqttException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();}
+            e.printStackTrace();
         }
+    }
 
 
     @Override
